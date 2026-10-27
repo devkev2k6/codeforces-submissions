@@ -1,0 +1,24 @@
+import sys
+input = sys.stdin.readline
+ 
+t = int(input())
+ 
+ 
+for _ in range(t):
+    n = int(input())
+    
+    place = 1
+    summands = []
+    
+    while n > 0:
+        digit = n % 10
+        if digit != 0:
+            summands.append(digit * place)
+        n //= 10
+        place *= 10
+    
+ 
+    print(len(summands))
+    
+ 
+    print(*(summands))
